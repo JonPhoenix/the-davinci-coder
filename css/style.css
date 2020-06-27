@@ -2,3 +2,17 @@
 
 /* Styling the HTML file content  */
 
+html, body,.wrapper {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: serif;
+    background-color: #5F6A6A;
+}
+
+.wrapper {
+    padding: 30px 20px 20px 30px;
+}
