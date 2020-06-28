@@ -57,6 +57,7 @@ header {
     text-align: center;
     font-size: 20px;
     resize: none;
+    display: block;
 }
 
 #button-panel {
