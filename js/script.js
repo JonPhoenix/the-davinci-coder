@@ -4,10 +4,14 @@ document.querySelector("#generate-button").addEventListener("click", generatePas
 document.querySelector("#copy-button").addEventListener("click", copyPassword);
 
 /* Arrays Declaration */
-var numArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specArr = ["!", "@", "#", "%", "^", "&", "*", "<", ">", "?", "~", "/", "+", "-", "(", ")", "[", "]", "{", "}", "$"];
-var lowerArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numArr = ["0123456789"];
+var specArr = ["!@#%^&*<>?~/+-()[]{}$"];
+var lowerArr = ["abcdefghijklmnopqrstuvwxyz"];
+var upperArr = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+
+//var specArr = ["!", "@", "#", "%", "^", "&", "*", "<", ">", "?", "~", "/", "+", "-", "(", ")", "[", "]", "{", "}", "$"];
+//var lowerArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+//var upperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 /* Declaration of "confirming" variables */
 var confirmLength = "";
@@ -63,19 +67,19 @@ function generatePassword() {
 
     /* f1-Step 8: Creating four conditionals if, one per each confirmed group, concatenating passwordCharacters + (array) */
     if (confirmNumeric = true) {
-        passwordCharacters = passwordCharacters.concat(numArr);
+        passwordCharacters = (passwordCharacters + numArr);
     }
 
     if (confirmSpecial = true) {
-        passwordCharacters = passwordCharacters.concat(specArr);
+        passwordCharacters = (passwordCharacters + specArr);
     }
 
     if (confirmLower = true) {
-        passwordCharacters = passwordCharacters.concat(lowerArr);
+        passwordCharacters = (passwordCharacters + lowerArr);
     }
 
     if (confirmUpper = true) {
-        passwordCharacters = passwordCharacters.concat(upperArr);
+        passwordCharacters = (passwordCharacters + upperArr);
     }
     
     /* Printing passwordCharacters to console */
