@@ -44,6 +44,7 @@ header {
 #inner-device {
     min-height: 100px;
     padding-top: 10px;
+    padding-right: 10px;
 }
 
 #password-box {
