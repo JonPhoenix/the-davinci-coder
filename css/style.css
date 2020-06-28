@@ -50,8 +50,7 @@ header {
 #password-box {
     border: 1px dashed #5F6A6A;
     border-radius: 10px;
-    max-width: auto;
-    min-width: 99%;
+    width: 99%;
     padding-top: 20px;
     padding-bottom: 80px;
     text-align: center;
