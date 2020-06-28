@@ -44,7 +44,6 @@ header {
 #inner-device {
     min-height: 100px;
     padding: 20px;
-    padding-right: 30px;
     text-align: center;
 }
 
@@ -58,6 +57,7 @@ header {
     font-size: 20px;
     resize: none;
     display: block;
+    overflow: hidden;
 }
 
 #button-panel {
