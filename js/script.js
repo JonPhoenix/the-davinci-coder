@@ -18,19 +18,20 @@ var confirmUpperCCase;
 
 /* Function to generate password. Step 1: Confirming the number of characters */
 function generatePassword() {
-    var confirmLenght = prompt("Choose your password length between 8 and 129 characters:");
+    var confirmLength = prompt("Choose your password length between 8 and 129 characters:");
 
     /* Loop if user input is off parameters */
-    if (confirmLength >= 8 || confirmLength <= 129) {
-        alert("Your password will have" +confirmLenght+ "characters");
-    }
-    else {
+    if (confirmLength < 8 || confirmLength > 129) {
         alert("You must choose between 8 and 129 characters. Try again");
-        prompt("Choose your password length between 8 and 129 characters:");
-    }
+        var confirmLength = prompt("Choose your password length between 8 and 129 characters:");
+    } else {alert(`Your password will have ${confirmLength} characters`);}
 
 }
 
 function copyPassword() {
     alert("Your password was copied to your clipboard")
+}
+
+for (var i = 0; i < confirmLength; i++) {
+
 }
