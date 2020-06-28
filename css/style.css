@@ -1,18 +1,51 @@
 /* Password Generator css style */
-
 /* Styling the HTML file content  */
 
-html, body,.wrapper {
+html, body,.container {
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 body {
-    font-family: serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #5F6A6A;
 }
 
-.wrapper {
-    padding: 30px 20px 20px 30px;
+#container {
+    padding: 40px;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    font-size: smaller;
+    color: #E5E8E8;
+}
+
+#device {
+    background-color: #E5E8E8;
+    border-radius: 10px;
+    border-width: 2px;
+    max-width: 800px;
+    margin: 1px auto;
+    padding: 40px;
+}
+
+#device-header {
+    text-align: center;
+    font-size: 15px;
+    color: #5F6A6A;
+}
+
+#password-box {
+    min-height: 100px;
+    width: 100%;
+    border: 1px dashed #5F6A6A;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+#control-panel {
+    text-align: center
 }

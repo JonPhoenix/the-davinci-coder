@@ -5,7 +5,7 @@
 <!-- Head with title, favicon image, and the linked Bootstrap CSS file -->
 <head>
     <!-- Using a creative and descriptive webpage title -->
-    <title>The DaVinci Password Generator</title>
+    <title>"DaVinci" Password Generator</title>
     <!-- Meta tags to ensure a responsive webpage across viewports -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,25 +14,29 @@
 </head>
 
 <body>
-    <div class="wrapper">
-    <!-- Developing Password Generator page content -->
+    <div id="container">
+    <!-- Designing Password Generator page content -->
         <header>
-            <h1>The DaVinci Password Generator</h1>
+            <h1>"DaVinci" Password Generator</h1>
         </header>
-        <div class="device">
-            <h2>Generate a Password</h2>
-        </div>
-        <div class="visualizer">
-            <textarea placeholder="Your New Password"></textarea>
-        </div>
-        <div class="control-panel">
-            <button>Generate a Password</button>
-            <button>Copy to Clipboard</button>
+        <div id="device">
+            <div id="device-header">
+                <h2>Generate a Password</h2>
+            </div>
+
+            <textarea 
+                readonly
+                id="password-box" 
+                placeholder="Your New Password"
+            ></textarea>
+            <div id="control-panel">
+                <button>Generate a Password</button>
+                <button>Copy to Clipboard</button>
+            </div>
         </div>
     </div>
 
-
     <!-- Linking JavaScript file -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
