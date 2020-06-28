@@ -63,19 +63,19 @@ function generatePassword() {
 
     /* f1-Step 8: Creating four conditionals if, one per each confirmed group, concatenating passwordCharacters + (array) */
     if (confirmNumeric = true) {
-        passwordCharacters = passwordCharacters + (numArr);
+        passwordCharacters = passwordCharacters.concat(numArr);
     }
 
     if (confirmSpecial = true) {
-        passwordCharacters = passwordCharacters + (specArr);
+        passwordCharacters = passwordCharacters.concat(specArr);
     }
 
     if (confirmLower = true) {
-        passwordCharacters = passwordCharacters + (lowerArr);
+        passwordCharacters = passwordCharacters.concat(lowerArr);
     }
 
     if (confirmUpper = true) {
-        passwordCharacters = passwordCharacters + (upperArr);
+        passwordCharacters = passwordCharacters.concat(upperArr);
     }
     
     /* Printing passwordCharacters to console */
