@@ -44,13 +44,14 @@ header {
 #inner-device {
     min-height: 100px;
     padding: 20px;
+    padding-right: 30px;
     text-align: center;
 }
 
 #password-box {
     border: 1px dashed #5F6A6A;
     border-radius: 10px;
-    width: 99%;
+    width: 100%;
     padding-top: 20px;
     padding-bottom: 80px;
     text-align: center;
