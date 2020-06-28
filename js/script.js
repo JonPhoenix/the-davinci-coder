@@ -10,6 +10,7 @@ var lowerCChar = ["a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"];
 var upperCChar = ["A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"];
 
 /* Variable declaration */
+var confirmLength
 var confirmNumChar;
 var confirmSpecChar;
 var confirmLowerCCase;
@@ -17,7 +18,17 @@ var confirmUpperCCase;
 
 /* Function to generate password. Step 1: Confirming the number of characters */
 function generatePassword() {
-    prompt("How many characters would you like your password to contain?");
+    var confirmLenght = prompt("Choose your password length between 8 and 129 characters:");
+
+    /* Loop if user input is off parameters */
+    if (confirmLength >= 8 || confirmLength <= 129) {
+        alert("Your password will have" +confirmLenght+ "characters");
+    }
+    else {
+        alert("You must choose between 8 and 129 characters. Try again");
+        prompt("Choose your password length between 8 and 129 characters:");
+    }
+
 }
 
 function copyPassword() {
