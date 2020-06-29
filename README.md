@@ -9,3 +9,16 @@ When clicking the button "Generate Password" the user will be prompted with the 
 Languages: HTML5, CSS3, JavaScript
 
 Deployment url: https://jonphoenix.github.io/the-davinci-coder/
+
+
+## Application Features
+
+```
+* Functional deployment - desktop and mobile
+* Generate Password button to start the process
+* User input validation for both number and type of characters
+* Generated password diplays after ansering all prompts
+* The new password can be copied using the Copy to clipboard button
+* Polished easy to use application with a personalized name
+
+```
