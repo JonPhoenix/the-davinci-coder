@@ -18,7 +18,7 @@ passChar = passChar.concat(uppArr);
 
 console.log(passChar)
 
-//function 1: Parameters for password length
+//function 1: Parameters for password length and loops until true
 function generateOptions() {
 
     var passLength = parseInt(prompt('Choose your password length between 8 and 129 characters:'));
@@ -46,10 +46,11 @@ function generateOptions() {
         confirmUpp: confirmUpp,
 
     }
+
     return optUser;
 }
 
-//function 2: Parameters for password length
+//function 2: Parameters to generateOptions with user's input
 function generatePassword() {
     var optUser = generateOptions();
     var passChar = [];
@@ -68,7 +69,21 @@ function generatePassword() {
         passChar = passChar.concat(uppArr);
     }
 
+    for (var i = 0; i <= optUser.passLength; ++i) {
+        var passRandom = Math.random() * optUser.passLength;
+        passResult.push(passChar[passRandom])
+    }
+
+    var newPassword = passResult.join('');
+
+    return newPassword;
 }
+
+//
+function writePassword() {
+
+}
+
 
 
 
