@@ -36,3 +36,14 @@ Deployment url: https://jonphoenix.github.io/the-davinci-coder/
 - - -
 
 ## Application Screenshots
+
+https://user-images.githubusercontent.com/65391199/86048542-8a881b80-ba05-11ea-8d3d-ab67d36291a4.png
+
+https://user-images.githubusercontent.com/65391199/86048541-89ef8500-ba05-11ea-8c1a-1523b14527ef.png
+
+https://user-images.githubusercontent.com/65391199/86048538-89ef8500-ba05-11ea-950e-7e9af983061c.png
+
+https://user-images.githubusercontent.com/65391199/86048536-8956ee80-ba05-11ea-9b69-ada242839ace.png
+
+https://user-images.githubusercontent.com/65391199/86048529-878d2b00-ba05-11ea-9839-00baf563afc3.png
+
