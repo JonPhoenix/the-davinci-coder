@@ -8,4 +8,4 @@ When clicking the button "Generate Password" the user will be prompted with the 
 
 Languages: HTML5, CSS3, JavaScript
 
-Deployment url: 
+Deployment url: https://jonphoenix.github.io/the-davinci-coder/
