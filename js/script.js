@@ -34,6 +34,10 @@ function generateOptions() {
     var confirmLow = confirm('Click OK if you want to include lower case characters.');
     var confirmUpp = confirm('Click OK if you want to include upper case characters.');
 
+    if (!confirmNum && !confirmSpe && !confirmLow && !confirmUpp) {
+        return alert('You must include at least one group of characters. Try again');
+    }
+
     var optUser = {
         passLength: passLength,
         confirmNum: confirmNum,
