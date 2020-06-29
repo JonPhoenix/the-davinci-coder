@@ -37,6 +37,30 @@ function generateOptions() {
     return optUser;
 }
 
+//function 2: Parameters for password length
+function generatePassword() {
+    var optUser = generateOptions();
+    var passChar = [];
+    var passResult = [];
+
+    if (optUser.confirmNum === true) {
+        passChar = passChar.concat(numArr);
+    }
+    if (optUser.confirmSpe === true) {
+        passChar = passChar.concat(speArr);
+    }
+    if (optUser.confirmLow === true) {
+        passChar = passChar.concat(lowArr);
+    }
+    if (optUser.confirmUpp === true) {
+        passChar = passChar.concat(uppArr);
+    }
+
+}
+
+
+
+
 
 
 /* Building the Password generator script */
