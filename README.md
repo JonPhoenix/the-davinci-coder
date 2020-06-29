@@ -22,3 +22,17 @@ Deployment url: https://jonphoenix.github.io/the-davinci-coder/
 * Polished easy to use application with a personalized name
 
 ```
+## Credits and References
+
+```
+* developer.mozilla.org
+* w3schools.com
+
+* www.florin-pop.com
+* css-tricks.com
+* htmlcolorcodes.com
+
+```
+- - -
+
+## Application Screenshots
