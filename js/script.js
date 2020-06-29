@@ -1,5 +1,6 @@
 // Building the Password generator script clean slate
 document.querySelector('#generate-button').addEventListener('click', generateOptions);
+document.querySelector('#copy-button').addEventListener('click', copyPassword);
 
 // Arrays declaration four groups of characters using .split
 var numArr = '12345'.split('')
@@ -70,27 +71,27 @@ function generatePassword() {
     }
 
     for (var i = 0; i <= optUser.passLength; i++) {
-        var passRandom = Math.random() * optUser.passLength;
-        passResult.push(passChar[passRandom])
+        var tempRandom = Math.random() * optUser.passLength;
+        passResult.push(passChar[tempRandom])
     }
 
-    var newPassword = passResult.join('');
+    newPassword = passResult.join('');
 
     return newPassword;
 }
 
-//
-var writePassword = generatePassword()
-document.getElementById("password-box").innerHTML = writePassword();
+// 
+function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector('password-box');
+    passwordText = password;
+}
 
-
-// function writePassword() {
-//     var showPassword= generatePassword();
-    
-//     showPassword.push('#password-box');
-
-
-
-//     showPassword.value = newPassword;
-//     showPassword = generatePassword() = document.writeln('#password-box');
-// }
+// 
+function copyPassword() {
+    var copyText = document.getElementById("password-box");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Your password was copied to the clipboard");
+}
