@@ -81,17 +81,19 @@ function generatePassword() {
 }
 
 // 
+
 function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector('password-box');
-    passwordText = password;
+    var passwordbox = generatePassword();
+    var passwordText = document.querySelector('password');
+    passwordText.value = passwordbox;
 }
 
 // 
+
 function copyPassword() {
-    var copyText = document.getElementById("password-box");
+    var copyText = document.getElementById('password');
     copyText.select();
     copyText.setSelectionRange(0, 99999)
-    document.execCommand("copy");
+    document.execCommand('copy');
     alert("Your password was copied to the clipboard");
 }
