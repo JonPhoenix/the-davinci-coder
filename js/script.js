@@ -1,4 +1,6 @@
 // Building the Password generator script clean slate
+document.querySelector('#generate-button').addEventListener('click', generateOptions);
+
 
 // Arrays declaration four groups of characters using .split
 var numArr = '12345'.split('')
@@ -8,7 +10,7 @@ var uppArr = 'ABCDEFG'.split('');
 // Creating a fifth empty array to combine four arrays
 var passChar = [];
 
-// Concatenating passwordCharacters and arrays
+//.Concat passwordCharacters and arrays
 passChar = passChar.concat(numArr);
 passChar = passChar.concat(speArr);
 passChar = passChar.concat(lowArr);
@@ -19,11 +21,18 @@ console.log(passChar)
 //function 1: Parameters for password length
 function generateOptions() {
 
-    var passLength = parseInt()
-    var confirmNum = confirm
-    var confirmSpe = confirm
-    var confirmLow = confirm
-    var confirmUpp = confirm
+    var passLength = parseInt(prompt('Choose your password length between 8 and 129 characters:'));
+
+    if (passLength < 8 || passLength > 129) {
+        return alert('You must choose between 8 and 129 characters. Try again.');
+    }
+
+    alert(`Your password will have ${passLength} characters`);
+
+    var confirmNum = confirm('Click OK if you want to include numeric characters.');
+    var confirmSpe = confirm('Click OK if you want to include special characters.');
+    var confirmLow = confirm('Click OK if you want to include lower case characters.');
+    var confirmUpp = confirm('Click OK if you want to include upper case characters.');
 
     var optUser = {
         passLength: passLength,
@@ -33,7 +42,6 @@ function generateOptions() {
         confirmUpp: confirmUpp,
 
     }
-
     return optUser;
 }
 
