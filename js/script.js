@@ -1,16 +1,16 @@
 // Building the Password generator script clean slate
-document.querySelector('#generate-button').addEventListener('click', generateOptions);
+document.querySelector('#generate-button').addEventListener('click', writePassword);
 document.querySelector('#copy-button').addEventListener('click', copyPassword);
 
-// Arrays declaration four groups of characters using .split
-var numArr = '12345'.split('')
-var speArr = '!@#$%^&*()'.split('');
-var lowArr = 'abcdrfg'.split('');
-var uppArr = 'ABCDEFG'.split('');
+// Arrays declaration four groups of characters
+var numArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var speArr = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
+var lowArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var uppArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 // Creating a fifth empty array to combine four arrays
 var passChar = [];
 
-//.Concat passwordCharacters and arrays
+//.Concat password Characters and arrays
 passChar = passChar.concat(numArr);
 passChar = passChar.concat(speArr);
 passChar = passChar.concat(lowArr);
@@ -19,7 +19,7 @@ passChar = passChar.concat(uppArr);
 console.log(passChar)
 
 //function 1: Parameters for password length and loops until true
-function generateOptions() {
+function generatePassword() {
 
     var passLength = parseInt(prompt('Choose your password length between 8 and 129 characters:'));
 
@@ -28,6 +28,8 @@ function generateOptions() {
     }
 
     alert(`Your password will have ${passLength} characters`);
+
+    console.log(passLength)
 
     var confirmNum = confirm('Click OK if you want to include numeric characters.');
     var confirmSpe = confirm('Click OK if you want to include special characters.');
@@ -47,15 +49,9 @@ function generateOptions() {
 
     }
 
-    return optUser;
-}
+    console.log(optUser)
 
-//function 2: Parameters to generateOptions with user's input
-function generatePassword() {
-
-    var optUser = generateOptions();
     var passChar = [];
-    var passResult = [];
 
     if (optUser.confirmNum === true) {
         passChar = passChar.concat(numArr);
@@ -70,25 +66,27 @@ function generatePassword() {
         passChar = passChar.concat(uppArr);
     }
 
-    for (var i = 0; i <= optUser.passLength; i++) {
-        var tempRandom = Math.random() * optUser.passLength;
-        passResult.push(passChar[tempRandom])
+    console.log(passChar)
+
+    var randomPass = [];
+    var passResult = [];
+
+    for (var i = 0; i < optUser.passLength; i++) { 
+        var randomPass = Math.floor(Math.random() * optUser.passLength); 
+        passResult.push(passChar[randomPass]);
     }
 
-    newPassword = passResult.join('');
+    var newPassword = passResult.join('');
 
     return newPassword;
 }
 
-// 
-
 function writePassword() {
-    var passwordbox = generatePassword();
-    var passwordText = document.querySelector('password');
-    passwordText.value = passwordbox;
+    var password = generatePassword();
+    var passwordText = document.querySelector('#password');
+    
+    passwordText.value = password;
 }
-
-// 
 
 function copyPassword() {
     var copyText = document.getElementById('password');
