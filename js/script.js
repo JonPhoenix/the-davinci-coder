@@ -1,6 +1,5 @@
 // Building the Password generator script clean slate
 document.querySelector('#generate-button').addEventListener('click', writePassword);
-document.querySelector('#copy-button').addEventListener('click', copyPassword);
 
 // Arrays declaration four groups of characters
 var numArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -86,6 +85,10 @@ function writePassword() {
     var passwordText = document.querySelector('#password');
     
     passwordText.value = password;
+
+    if (password = true) {
+        document.querySelector('#copy-button').addEventListener('click', copyPassword);
+    }
 }
 
 function copyPassword() {
