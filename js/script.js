@@ -45,7 +45,6 @@ function generatePassword() {
         confirmSpe: confirmSpe,
         confirmLow: confirmLow,
         confirmUpp: confirmUpp,
-
     }
 
     console.log(optUser)
@@ -87,6 +86,7 @@ function writePassword() {
     passwordText.value = password;
 
     if (password = true) {
+        document.querySelector('#copy-button').removeAttribute('disabled');
         document.querySelector('#copy-button').addEventListener('click', copyPassword);
     }
 }

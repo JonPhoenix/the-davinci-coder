@@ -75,6 +75,11 @@ button {
     cursor: pointer;
 }
 
+button[disabled] {
+    cursor: default;
+    background: #c0c7cf;
+}
+
 footer {
     height: 90px;
     margin-top: -90px;
