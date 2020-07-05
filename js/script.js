@@ -8,17 +8,17 @@ var uppArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "
 
 // Function 1: Parameters for password length and loops until true
 function generatePassword() {
-    // Creating a fifth empty array to combine four arrays
+    // Creating a fifth empty array to combine the four arrays and variants to for loop
     var passChar = [];
     var randomPass = [];
 	var passResult = [];
     var passLength = parseInt(prompt('Choose your password length between 8 and 129 characters:'));
-
+    // The if/return loop for user to choose password length
     if (passLength < 8 || passLength > 129) {
         return alert('You must choose between 8 and 129 characters. Try again.');
     }
     alert(`Your password will have ${passLength} characters`);
-
+    // The if/return loop for user to choose password characters
     var confirmNum = confirm('Click OK if you want to include numeric characters.');
     var confirmSpe = confirm('Click OK if you want to include special characters.');
     var confirmLow = confirm('Click OK if you want to include lower case characters.');
@@ -27,6 +27,7 @@ function generatePassword() {
     if (!confirmNum && !confirmSpe && !confirmLow && !confirmUpp) {
         return alert('You must include at least one group of characters. Try again');
     }
+    // Creating a variant object with properties and values from user choices
     var optUser = {
         passLength: passLength,
         confirmNum: confirmNum,
@@ -34,8 +35,7 @@ function generatePassword() {
         confirmLow: confirmLow,
         confirmUpp: confirmUpp,
     }
-
-    //.Concat password characters and arrays. User decide how big the PassChar array is
+    //.Concat password characters and arrays. User decide how big PassChar array will be
     if (optUser.confirmNum === true) {
         passChar = passChar.concat(numArr);
     }
@@ -50,7 +50,7 @@ function generatePassword() {
     }
 	// The for loop will happen as many times as user said they wanted length of password
     for (var i = 0; i < optUser.passLength; i++) { 
-
+        // No matter passLength we still have to choose from the length of the array with all characters
         var randomPass = Math.floor(Math.random() * passChar.length); 
         passResult.push(passChar[randomPass]);
     }
@@ -58,7 +58,7 @@ function generatePassword() {
     var newPassword = passResult.join('');
     return newPassword;
 }
-
+// Function 2: Writing password on index.html text box and enabling the copy button
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector('#password');
@@ -70,7 +70,7 @@ function writePassword() {
         document.querySelector('#copy-button').addEventListener('click', copyPassword);
     }
 }
-
+// Function 3: Enabled Copy to Clipboard button action and alert message
 function copyPassword() {
     var copyText = document.getElementById('password');
     copyText.select();
