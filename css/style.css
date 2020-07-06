@@ -6,6 +6,7 @@ html, body {
     margin: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #5F6A6A;
+    background-image: url("../img/musee-du-louvre.jpg");
 }
 
 #container {
