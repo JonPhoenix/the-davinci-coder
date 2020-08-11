@@ -2,7 +2,7 @@
 
 This application generates a password based on user choices. **The "DaVinci" Coder** is a password generator that seeks to provide a strongly reliable service for users looking to protect the access to sensitive data. By randomly generate a password that meets specific criteria, the app user will be able to create a strong secure password.
 
-In a business context this application offers a secure access to data, when companies require a secure password solution to solve the potential threats of working with weak passwords that could be figured out. The "Davinci" Coder generates **strong passwords in seconds**, saving employees time while securing the access to important information. 
+In a business context this application offers a secure access to data, when companies require a secure password solution to solve the potential threats of working with weak passwords that could be figured out. The "DaVinci" Coder generates **strong passwords in seconds**, saving employees time while securing the access to important information. 
 
 When clicking the button **"Generate Password"** the user will be prompted with the option to choose the password length between 8 a 129 characters. Once this first criteria is met, the user will choose the character type of the new password, special characters, numbers, lowercase characters, and/or uppercase characters. When the user have chosen the preferred parameters, the new password will be appear on the password box, the button **"Copy to Clipboard"** gets ready for the user.
 
