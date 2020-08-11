@@ -37,7 +37,8 @@ Deployment url: https://jonphoenix.github.io/the-davinci-coder/
 
 ## Application Screenshots
 
-https://user-images.githubusercontent.com/65391199/86549438-7c9a3500-bef4-11ea-9986-c72c0d5b46c1.png
+![DaVinci Coder](https://user-images.githubusercontent.com/65391199/86549438-7c9a3500-bef4-11ea-9986-c72c0d5b46c1.png)
+
 
 https://user-images.githubusercontent.com/65391199/86549442-7f952580-bef4-11ea-8287-14ac368d74d7.png
 
